@@ -1,16 +1,16 @@
-# 🐱 MEOW - Aplicativo de Aprendizado e Cultura
+# 🐱 MEOW - Aplicativo de Estudo Bíblico
 
-MEOW é um aplicativo web interativo que combina aprendizado bíblico e leitura de poesias em uma experiência única e educativa.
+MEOW é um aplicativo web interativo baseado nos ensinos das Testemunhas de Jeová e no conteúdo de jw.org, combinando aprendizado bíblico e leitura de textos inspiradores.
 
 ## 📱 O que é o MEOW?
 
-O MEOW é um **aplicativo** (como os apps do celular) que tem duas partes principais:
+O MEOW é um **aplicativo** que tem duas partes principais, totalmente baseado nas crenças e ensinos das Testemunhas de Jeová:
 
-### 1. 🎮 CatMeow - O Jogo de Perguntas
+### 1. 🎮 CatMeow - Quiz Bíblico
 
-Imagine um quiz sobre a Bíblia! Funciona assim:
+Um quiz sobre a Bíblia baseado nos ensinos de jw.org! Funciona assim:
 
-- Você responde perguntas sobre a Bíblia
+- Você responde perguntas sobre Jeová e a Bíblia
 - Se acertar, ganha **XP** (pontos de experiência)
 - Quanto mais XP, maior seu **nível**
 - Acertando em sequência, ganha **bônus**!
@@ -18,23 +18,24 @@ Imagine um quiz sobre a Bíblia! Funciona assim:
 **Características:**
 - Sistema de níveis progressivos
 - Bônus de XP por sequência de acertos (streak)
-- 15 perguntas bíblicas diversas
+- 15 perguntas baseadas nos ensinos das Testemunhas de Jeová
 - Interface intuitiva e responsiva
+- Perguntas sobre: O nome de Deus (Jeová), O Reino de Deus, esperança do paraíso, e mais
 
-### 2. 📚 CatVerso - O Leitor de Poesias
+### 2. 📚 CatVerso - Textos Bíblicos
 
-É como um livro digital com poesias e textos bonitos!
+É como um livro digital com textos bíblicos inspiradores!
 
-- Você pode ler poesias inspiradoras
-- Escutar as poesias com síntese de voz (Text-to-Speech)
-- Conteúdo baseado em textos bíblicos e reflexivos
+- Você pode ler versículos e textos da Bíblia
+- Escutar os textos com síntese de voz (Text-to-Speech)
+- Conteúdo baseado na Tradução do Novo Mundo e jw.org
 
 **Conteúdo disponível:**
-- Salmo 23
-- 1 Coríntios 13 (O Amor)
-- As Bem-Aventuranças (Mateus 5)
-- Eclesiastes 3 (Tudo Tem o Seu Tempo)
-- Salmo 27 (O Senhor é Minha Luz)
+- Salmo 83:18 - O Nome de Deus (Jeová)
+- O Reino de Deus (Mateus 6:9, 10)
+- O Amor Verdadeiro (1 Coríntios 13:4-8 - TNM)
+- A Esperança do Paraíso (Salmo 37)
+- Jeová é Nosso Refúgio (Salmo 91:1, 2)
 
 ## 🚀 Como Usar
 
@@ -54,12 +55,12 @@ Imagine um quiz sobre a Bíblia! Funciona assim:
 6. Use "Próxima Pergunta" para continuar
 7. Acompanhe seu progresso na barra de status (Nível, XP, Sequência)
 
-### CatVerso - Lendo Poesias
+### CatVerso - Lendo Textos Bíblicos
 
 1. Clique em "CatVerso" no menu ou no card na tela inicial
-2. Escolha uma poesia da lista
-3. Leia o conteúdo completo
-4. Clique em "🔊 Escutar" para ouvir a poesia em voz alta
+2. Escolha um texto da lista
+3. Leia o conteúdo completo (Tradução do Novo Mundo)
+4. Clique em "🔊 Escutar" para ouvir o texto em voz alta
 5. Use "⏹ Parar" para interromper a leitura
 6. Clique em "← Voltar" para voltar à lista
 
@@ -86,28 +87,37 @@ Imagine um quiz sobre a Bíblia! Funciona assim:
 
 ### Sistema de Áudio (CatVerso)
 - Síntese de voz em Português Brasileiro (pt-BR)
+- Leitura de textos da Tradução do Novo Mundo
 - Taxa de fala ajustada para melhor compreensão
 - Controles de play/stop
 - Compatível com a maioria dos navegadores modernos
 
+## 🌐 Fonte do Conteúdo
+
+Todo o conteúdo deste aplicativo é baseado nos ensinos das Testemunhas de Jeová e no site oficial jw.org:
+- Perguntas baseadas na doutrina das Testemunhas de Jeová
+- Textos da Tradução do Novo Mundo da Bíblia Sagrada
+- Enfoque no nome de Deus (Jeová), Reino de Deus e esperança do paraíso
+- Alinhado com as publicações da Torre de Vigia
+
 ## 🌟 Próximas Melhorias
 
-- [ ] Adicionar mais perguntas ao banco de dados
-- [ ] Sistema de conquistas (achievements)
-- [ ] Ranking de pontuação
-- [ ] Mais poesias e textos
+- [ ] Adicionar mais perguntas baseadas em jw.org
+- [ ] Incluir mais textos da Tradução do Novo Mundo
+- [ ] Links diretos para jw.org
 - [ ] Modo offline com Service Workers
-- [ ] Temas personalizáveis
 - [ ] Salvamento de progresso no localStorage
 
 ## 📄 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## 👨‍💻 Autor
+## 👨‍💻 Sobre
 
-Desenvolvido com 💜 para aprendizado e cultura
+Desenvolvido com 💜 para ajudar no estudo da Bíblia
+
+**Nota:** Este aplicativo é independente e não é oficialmente afiliado ou endossado por jw.org ou pelas Testemunhas de Jeová. O conteúdo é baseado nos ensinos disponíveis publicamente em jw.org.
 
 ---
 
-**Divirta-se aprendendo e lendo com MEOW!** 🐱
+**Aprenda sobre Jeová e Suas promessas!** 🐱

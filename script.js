@@ -8,36 +8,36 @@ let gameState = {
     answeredCorrectly: false
 };
 
-// Bible Questions Database
+// Bible Questions Database - Based on jw.org teachings
 const questions = [
     {
-        question: "Quem foi o primeiro homem criado por Deus?",
+        question: "Qual é o nome de Deus revelado na Bíblia?",
+        answers: ["Senhor", "Jeová", "Deus Todo-Poderoso", "Pai Celestial"],
+        correct: 1
+    },
+    {
+        question: "Quem foi o primeiro homem criado por Jeová?",
         answers: ["Adão", "Noé", "Abraão", "Moisés"],
         correct: 0
     },
     {
-        question: "Quantos dias Deus levou para criar o mundo?",
+        question: "Em quantos dias Jeová criou a Terra e tudo o que nela há?",
         answers: ["5 dias", "6 dias", "7 dias", "8 dias"],
         correct: 1
     },
     {
-        question: "Quem construiu a arca?",
+        question: "Qual é o tema principal da Bíblia?",
+        answers: ["O amor", "O Reino de Deus", "A salvação", "A criação"],
+        correct: 1
+    },
+    {
+        question: "Quem construiu a arca antes do Dilúvio?",
         answers: ["Abraão", "Moisés", "Noé", "Davi"],
         correct: 2
     },
     {
-        question: "Qual o nome da primeira mulher criada por Deus?",
-        answers: ["Maria", "Eva", "Sara", "Raquel"],
-        correct: 1
-    },
-    {
-        question: "Quantos apóstolos Jesus tinha?",
+        question: "Quantos discípulos fiéis Jesus escolheu?",
         answers: ["10", "11", "12", "13"],
-        correct: 2
-    },
-    {
-        question: "Quem traiu Jesus?",
-        answers: ["Pedro", "João", "Judas", "Tomé"],
         correct: 2
     },
     {
@@ -46,8 +46,8 @@ const questions = [
         correct: 2
     },
     {
-        question: "Quem derrotou o gigante Golias?",
-        answers: ["Saul", "Davi", "Sansão", "Josué"],
+        question: "Qual é a esperança para a Terra segundo a Bíblia?",
+        answers: ["Será destruída", "Se tornará um paraíso", "Será abandonada", "Ficará igual"],
         correct: 1
     },
     {
@@ -56,7 +56,7 @@ const questions = [
         correct: 0
     },
     {
-        question: "Quem abriu o Mar Vermelho?",
+        question: "Quem separou as águas do Mar Vermelho?",
         answers: ["Josué", "Abraão", "Moisés", "Elias"],
         correct: 2
     },
@@ -66,100 +66,92 @@ const questions = [
         correct: 1
     },
     {
-        question: "Quem foi jogado na cova dos leões?",
+        question: "Qual é o principal mandamento de Jesus?",
+        answers: ["Não matar", "Amar a Jeová e ao próximo", "Guardar o sábado", "Jejuar"],
+        correct: 1
+    },
+    {
+        question: "Segundo a Bíblia, o que acontece quando morremos?",
+        answers: ["Vamos para o céu", "Deixamos de existir", "Viramos anjos", "Reencarnamos"],
+        correct: 1
+    },
+    {
+        question: "Quem foi jogado na cova dos leões por orar a Jeová?",
         answers: ["Daniel", "José", "Jonas", "Davi"],
         correct: 0
     },
     {
-        question: "Quantos filhos Jacó teve?",
-        answers: ["10", "11", "12", "13"],
-        correct: 2
-    },
-    {
-        question: "Quem foi engolido por um grande peixe?",
-        answers: ["Jonas", "Pedro", "João", "Judas"],
-        correct: 0
-    },
-    {
-        question: "Qual foi o primeiro milagre de Jesus?",
-        answers: ["Multiplicação dos pães", "Cura de um cego", "Transformar água em vinho", "Ressurreição de Lázaro"],
-        correct: 2
+        question: "O que Jesus ensinou sobre o Reino de Deus?",
+        answers: ["Está apenas nos corações", "É um governo celestial real", "É uma organização terrestre", "É apenas simbólico"],
+        correct: 1
     }
 ];
 
-// Poetry Database
+// Poetry Database - Based on jw.org content and teachings
 const poetries = [
     {
-        title: "Salmo 23",
-        author: "Rei Davi",
-        content: `O Senhor é o meu pastor; nada me faltará.
-Deitar-me faz em verdes pastos,
-Guia-me mansamente a águas tranquilas.
-Refrigera a minha alma;
-Guia-me pelas veredas da justiça,
-Por amor do seu nome.
-Ainda que eu andasse pelo vale da sombra da morte,
-Não temeria mal algum,
-Porque tu estás comigo;
-A tua vara e o teu cajado me consolam.`,
-        preview: "O Senhor é o meu pastor; nada me faltará..."
+        title: "Salmo 83:18 - O Nome de Deus",
+        author: "Tradução do Novo Mundo",
+        content: `"Para que saibam que tu, cujo nome é Jeová,
+Somente tu és o Altíssimo sobre toda a terra."
+
+O nome de Deus, Jeová, aparece mais de 7.000 vezes
+nas Escrituras Hebraicas originais.
+Conhecer e usar o nome de Deus nos aproxima dele.
+Jeová deseja que o conheçamos pelo nome.`,
+        preview: "Para que saibam que tu, cujo nome é Jeová..."
     },
     {
-        title: "O Amor",
-        author: "Apóstolo Paulo - 1 Coríntios 13",
-        content: `O amor é paciente, o amor é bondoso.
-Não inveja, não se vangloria, não se orgulha.
-Não maltrata, não procura seus interesses,
-Não se ira facilmente, não guarda rancor.
-O amor não se alegra com a injustiça,
-Mas se alegra com a verdade.
-Tudo sofre, tudo crê, tudo espera, tudo suporta.
-O amor nunca perece.`,
-        preview: "O amor é paciente, o amor é bondoso..."
+        title: "O Reino de Deus",
+        author: "Baseado em Mateus 6:9, 10",
+        content: `"Santificado seja o teu nome.
+Venha o teu Reino.
+Seja feita a tua vontade, como no céu, assim também na terra."
+
+O Reino de Deus é um governo celestial real.
+Jesus Cristo é o Rei desse Reino.
+Em breve, o Reino trará paz e justiça para a Terra.
+Transformará nosso planeta num paraíso.`,
+        preview: "Venha o teu Reino. Seja feita a tua vontade..."
     },
     {
-        title: "Bem-Aventuranças",
-        author: "Jesus Cristo - Mateus 5",
-        content: `Bem-aventurados os pobres de espírito,
-Porque deles é o reino dos céus.
-Bem-aventurados os que choram,
-Porque serão consolados.
-Bem-aventurados os mansos,
-Porque herdarão a terra.
-Bem-aventurados os que têm fome e sede de justiça,
-Porque serão fartos.
-Bem-aventurados os misericordiosos,
-Porque alcançarão misericórdia.`,
-        preview: "Bem-aventurados os pobres de espírito..."
+        title: "O Amor Verdadeiro",
+        author: "1 Coríntios 13:4-8 - TNM",
+        content: `O amor é paciente e bondoso.
+O amor não é ciumento, não se gaba, não se incha de orgulho,
+não se porta indecentemente, não busca os seus próprios interesses,
+não se irrita, não fica ressentido.
+Não se alegra com a injustiça, mas se alegra com a verdade.
+Suporta todas as coisas, acredita em todas as coisas,
+espera todas as coisas, persevera em todas as coisas.
+O amor nunca acaba.`,
+        preview: "O amor é paciente e bondoso..."
     },
     {
-        title: "Tudo Tem o Seu Tempo",
-        author: "Eclesiastes 3",
-        content: `Tudo tem o seu tempo determinado,
-E há tempo para todo o propósito debaixo do céu.
-Há tempo de nascer, e tempo de morrer;
-Tempo de plantar, e tempo de arrancar o que se plantou;
-Tempo de chorar, e tempo de rir;
-Tempo de gemer, e tempo de dançar;
-Tempo de espalhar pedras, e tempo de ajuntar pedras;
-Tempo de abraçar, e tempo de afastar-se de abraçar;
-Tempo de buscar, e tempo de perder;
-Tempo de guardar, e tempo de lançar fora.`,
-        preview: "Tudo tem o seu tempo determinado..."
+        title: "A Esperança do Paraíso",
+        author: "Baseado em Salmo 37:10, 11, 29",
+        content: `Apenas mais um pouco, e os maus não mais existirão;
+Você procurará o lugar deles, e eles não estarão lá.
+Mas os mansos possuirão a terra
+E terão grande alegria na abundância de paz.
+
+Os justos possuirão a terra
+E viverão nela para sempre.
+Esta é a promessa de Jeová para os que o amam.`,
+        preview: "Os mansos possuirão a terra e viverão nela..."
     },
     {
-        title: "O Senhor é Minha Luz",
-        author: "Salmo 27",
-        content: `O Senhor é a minha luz e a minha salvação;
-De quem terei temor?
-O Senhor é a força da minha vida;
-De quem me recearei?
-Quando os malvados se aproximam de mim,
-Para comerem a minha carne,
-Meus adversários e meus inimigos tropeçam e caem.
-Ainda que um exército se acampe contra mim,
-O meu coração não temerá.`,
-        preview: "O Senhor é a minha luz e a minha salvação..."
+        title: "Jeová é Nosso Refúgio",
+        author: "Salmo 91:1, 2 - TNM",
+        content: `Quem habita no esconderijo do Altíssimo
+Ficará à sombra do Todo-Poderoso.
+Direi a respeito de Jeová:
+"Ele é meu refúgio e minha fortaleza,
+Meu Deus, em quem confio."
+
+Jeová protege os que buscam refúgio nele.
+Ele é nosso protetor e ajudador.`,
+        preview: "Jeová é meu refúgio e minha fortaleza..."
     }
 ];
 
