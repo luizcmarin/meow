@@ -64,13 +64,6 @@ Um quiz sobre a Bíblia baseado nos ensinos de jw.org! Funciona assim:
 5. Use "⏹ Parar" para interromper a leitura
 6. Clique em "← Voltar" para voltar à lista
 
-## 🛠️ Tecnologias Utilizadas
-
-- **HTML5**: Estrutura da aplicação
-- **CSS3**: Estilização com gradientes e animações
-- **JavaScript**: Lógica do jogo e interatividade
-- **Web Speech API**: Síntese de voz para leitura das poesias
-
 ## 📋 Requisitos
 
 - Navegador web moderno (Chrome, Firefox, Safari, Edge)
