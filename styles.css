@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+#app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    color: white;
+    padding: 30px 0;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+#main-menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.menu-btn {
+    background: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.section {
+    display: none;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s;
+}
+
+.section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Home Section */
+.welcome-card {
+    text-align: center;
+}
+
+.welcome-card h2 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+.app-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.app-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+    font-size: 4em;
+    margin-bottom: 15px;
+}
+
+.app-card h3 {
+    color: #667eea;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.app-card p {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.app-card ul {
+    text-align: left;
+    list-style: none;
+    padding-left: 0;
+}
+
+.app-card ul li {
+    padding: 5px 0;
+    color: #666;
+}
+
+.app-card ul li:before {
+    content: "✓ ";
+    color: #667eea;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* CatMeow Game */
+.game-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stats-bar {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    text-align: center;
+    padding: 10px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9em;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    font-size: 2em;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.stat-secondary {
+    font-size: 1em;
+    opacity: 0.8;
+}
+
+.xp-bar-container {
+    background: #e0e0e0;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.xp-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    width: 0%;
+    transition: width 0.5s;
+}
+
+.question-container {
+    background: #f5f7fa;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.question-container h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.answers {
+    display: grid;
+    gap: 15px;
+}
+
+.answer-btn {
+    background: white;
+    border: 2px solid #667eea;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: left;
+}
+
+.answer-btn:hover {
+    background: #667eea;
+    color: white;
+    transform: translateX(5px);
+}
+
+.answer-btn.correct {
+    background: #4caf50;
+    border-color: #4caf50;
+    color: white;
+}
+
+.answer-btn.incorrect {
+    background: #f44336;
+    border-color: #f44336;
+    color: white;
+}
+
+.answer-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.result-message {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.result-message.success {
+    background: #4caf50;
+    color: white;
+}
+
+.result-message.error {
+    background: #f44336;
+    color: white;
+}
+
+.result-message.hidden {
+    display: none;
+}
+
+.game-controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* CatVerso Poetry Reader */
+.poetry-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.poetry-container h2 {
+    color: #667eea;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.poetry-list {
+    display: grid;
+    gap: 20px;
+}
+
+.poetry-item {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.poetry-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.poetry-item h3 {
+    color: #667eea;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.poetry-item .author {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.poetry-item .preview {
+    color: #555;
+    font-size: 0.95em;
+}
+
+.poetry-reader {
+    animation: fadeIn 0.3s;
+}
+
+.poetry-reader h3 {
+    color: #667eea;
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.poetry-author {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+
+.poetry-content {
+    background: #f5f7fa;
+    padding: 30px;
+    border-radius: 10px;
+    line-height: 2;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    white-space: pre-line;
+}
+
+.audio-controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Buttons */
+.btn {
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background: #e0e0e0;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background: #d0d0d0;
+    transform: translateY(-2px);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .stats-bar {
+        flex-direction: column;
+    }
+
+    .app-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
