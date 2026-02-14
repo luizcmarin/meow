@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEOW - CatMeow & CatVerso</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>🐱 MEOW</h1>
+            <p class="subtitle">Seu aplicativo de aprendizado e leitura</p>
+        </header>
+
+        <nav id="main-menu">
+            <button class="menu-btn" onclick="showSection('home')">🏠 Início</button>
+            <button class="menu-btn" onclick="showSection('catmeow')">🎮 CatMeow</button>
+            <button class="menu-btn" onclick="showSection('catverso')">📚 CatVerso</button>
+        </nav>
+
+        <main>
+            <!-- Home Section -->
+            <section id="home" class="section active">
+                <div class="welcome-card">
+                    <h2>Bem-vindo ao MEOW!</h2>
+                    <p>Escolha uma das opções:</p>
+                    
+                    <div class="app-cards">
+                        <div class="app-card" onclick="showSection('catmeow')">
+                            <div class="card-icon">🎮</div>
+                            <h3>CatMeow</h3>
+                            <p>Jogo de Perguntas sobre a Bíblia</p>
+                            <ul>
+                                <li>Responda perguntas bíblicas</li>
+                                <li>Ganhe XP e suba de nível</li>
+                                <li>Bônus por sequência de acertos</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="app-card" onclick="showSection('catverso')">
+                            <div class="card-icon">📚</div>
+                            <h3>CatVerso</h3>
+                            <p>Leitor de Poesias</p>
+                            <ul>
+                                <li>Leia poesias inspiradoras</li>
+                                <li>Escute os textos em áudio</li>
+                                <li>Conteúdo sempre atualizado</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CatMeow Section -->
+            <section id="catmeow" class="section">
+                <div class="game-container">
+                    <div class="stats-bar">
+                        <div class="stat">
+                            <span class="stat-label">Nível:</span>
+                            <span id="level" class="stat-value">1</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">XP:</span>
+                            <span id="xp" class="stat-value">0</span>
+                            <span class="stat-secondary">/ <span id="xp-needed">100</span></span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Sequência:</span>
+                            <span id="streak" class="stat-value">0</span>
+                        </div>
+                    </div>
+
+                    <div class="xp-bar-container">
+                        <div id="xp-bar" class="xp-bar"></div>
+                    </div>
+
+                    <div id="question-container" class="question-container">
+                        <h3 id="question-text"></h3>
+                        <div id="answers" class="answers"></div>
+                    </div>
+
+                    <div id="result-message" class="result-message hidden"></div>
+
+                    <div class="game-controls">
+                        <button id="next-btn" class="btn btn-primary" onclick="nextQuestion()">Próxima Pergunta</button>
+                        <button class="btn btn-secondary" onclick="resetGame()">Reiniciar Jogo</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CatVerso Section -->
+            <section id="catverso" class="section">
+                <div class="poetry-container">
+                    <h2>📚 Biblioteca de Poesias</h2>
+                    
+                    <div class="poetry-list" id="poetry-list"></div>
+                    
+                    <div id="poetry-reader" class="poetry-reader hidden">
+                        <button class="btn btn-secondary" onclick="closePoetry()">← Voltar</button>
+                        <h3 id="poetry-title"></h3>
+                        <div id="poetry-author" class="poetry-author"></div>
+                        <div id="poetry-content" class="poetry-content"></div>
+                        <div class="audio-controls">
+                            <button id="read-btn" class="btn btn-primary" onclick="readPoetry()">🔊 Escutar</button>
+                            <button id="stop-btn" class="btn btn-secondary hidden" onclick="stopReading()">⏹ Parar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>MEOW © 2026 - Aprendizado e Cultura</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
